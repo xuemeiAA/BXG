@@ -38,10 +38,10 @@
             $("#logout_btn").click(function(){
                 //1.向后台发送ajax请求
                 $.ajax({
-                   url:"http://api.botue.com/logout",
+                   url:"api/logout",
                    type:"post",
                    success:function(data){
-                    if(data.code==200){
+                    if(data.code == 200){
                       //2.接收到请求响应数据之后，如果退出成功，就跳回登录页 
                        location.href = "/dashboard/login"
                     }
